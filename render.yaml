@@ -1,7 +1,8 @@
 databases:
   - name: app-name
-    databaseName: app-name
-    user: app-name
+    databaseName: appname_db
+    user: appname_user
+
 
 services:
   - type: web
