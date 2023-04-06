@@ -3,7 +3,6 @@ databases:
     databaseName: appname_db
     user: appname_user
 
-
 services:
   - type: web
     name: app-name
@@ -14,10 +13,8 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: app_name
+          name: app-name
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-
-
 
