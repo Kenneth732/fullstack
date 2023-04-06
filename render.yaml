@@ -1,0 +1,22 @@
+databases:
+  - name: app-name
+    databaseName: app-name
+    user: app-name
+
+services:
+  - type: web
+    name: app-name
+    env: ruby
+    repo: https://github.com/Kenneth732/fullstack
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: app_name
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
+
+
